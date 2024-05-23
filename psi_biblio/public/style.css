@@ -1,0 +1,587 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+nav {
+    background-color: #333;
+    color: #A1A1A1;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* elementy wycentrowane na wysokości */
+    align-items: center;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 0 20px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+
+nav a {
+    color: #A1A1A1;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: 20px;
+}
+nav a:hover {
+    color: #ccc;
+}
+
+nav div {
+    display: inline-block;
+    justify-content: space-between;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 12.5em;
+    margin: 5px;
+}
+.arrow {
+    width: 30px;
+    height: 30px;
+    /* #A1A1A1 */
+    /* https://www.iconfinder.com/icons/211614/down_b_arrow_icon */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200px;
+    border-radius: 0 0 10px 10px;
+}
+
+.dropdown-content a {
+    margin: 0;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 170px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-content a:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:focus .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    background-color: #A1A1A1;
+    color: white;
+    padding: 20px 20px 12px;
+    /* Zwiększa rozmiar przycisku */
+    font-size: 20px;
+    /* Zwiększa rozmiar tekstu */
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    /* Dodaje zaokrąglone rogi */
+    width: 200px;
+}
+
+.dropbtn:focus,
+.dropbtn:hover {
+    background-color: #ccc;
+    border-radius: 10px 10px 0 0;
+}
+
+.right-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-nav .login {
+    display: inline-block;
+}
+
+.right-nav .query {
+    display: inline-block;
+    margin-right: 0px 20px;
+}
+
+nav button {
+    background-color: #A1A1A1;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    /* margin-left: 20px; */
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+nav button:hover {
+    background-color: #ccc;
+}
+
+
+
+main {
+    margin: 0 auto;
+    width: 80%;
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer aside {
+    width: 30%;
+}
+footer .map {
+    width: 60%;
+}
+footer iframe {
+    width: 100%;
+}
+footer h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+footer p {
+    font-size: 1.2em;
+}
+
+.hidden_author{
+    display: none;
+}
+
+.addLink {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #A1A1A1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .list_element {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  
+  .list_element .book__title, .list_element .author__name, .list_element .publisher__name {
+    display: inline-block;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  
+  
+  .list_element .book__author {
+    margin: 0px 20px 20px 20px;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+  
+  .list_element .book__author p {
+    word-wrap: break-word;
+  }
+  
+  .list_element .book__con {
+    display: inline-block;
+  }
+  
+  .list_element .book__publisher {
+    display: inline-block;
+  }
+  
+  .list_element .book__description {
+    width: 100%;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+  
+  .list_element .book__actions {
+    margin-top: 20px;
+    display: inline-block;
+  }
+  
+  .list_element a {
+    margin-right: 10px;
+    color: #A1A1A1;
+    text-decoration: none;
+  }
+  
+  .list_element a:hover {
+    color: #333;
+  }
+
+  #content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+#content h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#content form {
+    display: flex;
+    flex-direction: column;
+}
+
+#content form p {
+    margin-bottom: 20px;
+}
+
+#content form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#content form input[type="text"],
+#content form input[type="date"],
+#content form input[type="number"],
+#content form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+table {
+    display: block;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    overflow: scroll;
+}
+
+  #content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+#content button {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #A1A1A1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #content  button:hover {
+    background-color: #ccc;
+  }
+
+.list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.item > div {
+    flex: 1 0 20%; /* This means that each div will take up 20% of the row and will not shrink */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .item > div {
+        flex: 1 0 50%; /* On smaller screens, each div will take up 50% of the row */
+    }
+}
+
+@media (max-width: 480px) {
+    .item > div {
+        flex: 1 0 100%; /* On very small screens, each div will take up 100% of the row (stacked vertically) */
+    }
+}
+
+/* Styling for different statuses */
+.status_overdue {
+    color: red;
+}
+
+.status_borrowed {
+    color: orange;
+}
+
+.status_returned {
+    color: green;
+}
+
+/* media */
+@media (max-width: 768px) {
+    .list_element .book__title, .list_element .author__name, .list_element .publisher__name {
+        display: block;
+    }
+    .list_element .book__author {
+        margin: 0px 0px 20px 0px;
+    }
+    .list_element .book__con {
+        display: block;
+    }
+    .list_element .book__publisher {
+        display: block;
+    }
+    .list_element .book__description {
+        display: block;
+    }
+    .list_element .book__actions {
+        display: block;
+    }
+}
+/* media 600px nav menu */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    nav div {
+        display: block;
+    }
+    .logo {
+        display: block;
+    }
+    .logo a {
+        margin: auto;
+    }
+    
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+    nav .left-nav {
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    nav .right-nav {
+        margin-top: 20px;
+    }
+    nav .right-nav .login {
+        margin-bottom: 20px;
+    }
+    nav .right-nav .query {
+        margin-bottom: 20px;
+    }
+    nav .right-nav .login a {
+        margin-left: 0px;
+    }
+    nav .right-nav .query a {
+        margin-left: 0px;
+    }
+    nav .right-nav .login button {
+        margin-left: 0px;
+    }
+    nav .right-nav .query button {
+        margin-left: 0px;
+    }
+    nav .right-nav .login button {
+        margin-left: 0px;
+    }
+    nav .right-nav .query button {
+        margin-left: 0px;
+    }
+    nav .right-nav .login button {
+        margin-left: 0px;
+    }
+    nav .right-nav .query button {
+        margin-left: 0px;
+    }
+    nav .right-nav .login button {
+        margin-left: 0px;
+    }
+    nav .right-nav .query button {
+        margin-left: 0px;
+    }
+    nav .right-nav .login button {
+        margin-left: 0px;
+    }
+    nav .right-nav .query button {
+        margin-left: 0px;
+    }
+    nav .right-nav .login button {
+        margin-left: 0px;
+    }
+    nav .right-nav .query button {
+        margin-left: 0px;
+    }
+    nav .right-nav .login button {
+        margin-left: 0px;
+    }
+    nav .right-nav .query button {
+        margin-left: 0px;
+    }
+    nav .right-nav .login button {
+        margin-left: 0px;
+    }
+    nav .right-nav .query button {
+        margin-left: 0px;
+    }
+    nav .right-nav .login button {
+        margin-left: 0px;
+    }
+    nav .right-nav .query button {
+        margin-left: 0px;
+    }
+
+    .dropdown {
+        /* chce żybt było na srodku */
+        display: block;
+    }
+
+    .dropdown-content {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .dropdown-content a {
+        width: 100%;
+    }
+    .dropdown-content a:last-child {
+        border-radius: 0px;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown-content a {
+        margin: 0;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown-content a:last-child {
+        border-radius: 0px;
+    }
+    .dropdown-content a {
+        margin: 0;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown-content a:last-child {
+        border-radius: 0px;
+    }
+    .dropdown-content a {
+        margin: 0;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown-content a:last-child {
+        border-radius: 0px;
+    }
+    .dropdown-content a {
+        margin: 0;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown-content a:last-child {
+        border-radius: 0px;
+    }
+    .dropdown-content a {
+        margin: 0;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown-content a:last-child {
+        border-radius: 0px;
+    }
+    .dropdown-content a {
+        margin: 0;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown-content a:last-child {
+        border-radius: 0px;
+    }
+    .dropdown-content a {
+        margin: 0;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown-content a:last-child {
+        border-radius: 0px;
+    }
+    .dropdown-content a {
+        margin: 0;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown-content a:last-child {
+        border-radius: 0px;
+    }
+    .dropdown-content a {
+        margin: 0;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown-content a:last-child {
+        border-radius: 0px;
+    }
+
+}
